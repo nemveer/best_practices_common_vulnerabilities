@@ -36,3 +36,20 @@
 - when uint32 is converted to uint16 then the smallest bytes are taken 0x12345678 -> 0x5678
 
 12. If you declare a new storage struct in your function, it will overwrite other globally stored variables (starting from the first slot)
+
+13. For smart contract, nonce 0 is always it's self creation event
+
+14. Don't assume the that the gas fees of specific opcodes will be same. So don't base the smart contract on the gas fees of opcode, eg. transfer(2300 gas)
+
+15. Transferring of ownership should be 2 step process
+- i. Transfer ownership to newAddress - by current owner
+- ii. Accept ownership - by new owner
+
+16. In previous versions of solidity, function with no visibility specified were defaulted to public
+
+17. Point out if there's floating pragma
+
+18. Always assume external function call to be fail. Use pull approach over push.
+
+19. Check if there's race condition. Ask in every function that if it's vulnerable to front-run.
+
