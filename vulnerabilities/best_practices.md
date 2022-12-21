@@ -53,3 +53,7 @@
 
 19. Check if there's race condition. Ask in every function that if it's vulnerable to front-run.
 
+20. Gas griefing attack: in relayer, relayer contract can define amt of gas to be forwarded with call, which may be just sufficient to make a call to succeed but not the subcall
+
+21. in multiple inheritance inherit from the more general to the more specific
+
